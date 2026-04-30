@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import { Linking, Pressable, ScrollView, Text, View } from "react-native";
+import { Image, Linking, Pressable, ScrollView, Text, View } from "react-native";
 import { useLocalSearchParams, useRouter } from "expo-router";
 import PassportTopRightIcon from "../../components/PassportTopRightIcon";
 import {
@@ -221,6 +221,13 @@ export default function CountryDetailsScreen() {
             {content?.attractions.length ? (
               content.attractions.map((attraction) => (
                 <View key={attraction.id} className="rounded-xl border border-[#3ED0C933] bg-[#2A2D34CC] p-4">
+                  {attraction.image_url ? (
+                    <Image
+                      source={{ uri: attraction.image_url }}
+                      className="mb-3 h-56 w-full rounded-lg"
+                      resizeMode="cover"
+                    />
+                  ) : null}
                   <Text className="text-base font-semibold text-white">{attraction.title}</Text>
                   {attraction.description ? <Text className="mt-1 text-slate-200">{attraction.description}</Text> : null}
                   {attraction.price !== null ? (

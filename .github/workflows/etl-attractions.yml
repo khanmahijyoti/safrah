@@ -30,4 +30,7 @@ jobs:
         env:
           SUPABASE_URL: ${{ secrets.SUPABASE_URL }}
           SUPABASE_SERVICE_ROLE_KEY: ${{ secrets.SUPABASE_SERVICE_ROLE_KEY }}
-          FOURSQUARE_API_KEY: ${{ secrets.FOURSQUARE_API_KEY }}
+          RAPIDAPI_KEY: ${{ secrets.RAPIDAPI_KEY }}
+          RAPIDAPI_HOST: ${{ secrets.RAPIDAPI_HOST }}
+          RAPIDAPI_URL: ${{ secrets.RAPIDAPI_URL }}
+          RAPIDAPI_METHOD: ${{ secrets.RAPIDAPI_METHOD }}
